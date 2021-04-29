@@ -1,0 +1,332 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block nav_item_certificates %}active{% endblock nav_item_certificates %}
+{% block title %}Certificates{% endblock title %}
+
+{% block body %}
+  <!--Below one is Important Script for images in rows part-->
+  <!-- Images in Bootstrap 
+  <div class="container">
+    <h2 class="text-center my-3 bg-danger" style="font-family:Brush Script MT;font-size:40px"><b>Certificates</b></h2>
+    <div class="row">
+        <div class="col-sm-6 text-light bg-dark">
+          <div class="thumbnail">
+            <img src="{% static '/certificates/ibm.jpg' %}" width="600" height="400" class="d-block w-100" alt="..." />
+            <div class="caption">
+                <p><b>I had completed IBM Data Science Professional Certification from Coursera and honed hands-on skills in Data Science and Machine Learning.</b></p>
+            </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-6 text-light bg-dark">
+          <div class="thumbnail">
+            <img src="{% static '/certificates/nvidia.jpg' %}" width="600" height="400" class="d-block w-100" alt="..." />
+            <div class="caption">
+                <p><b>I had completed the Fundamentals of Deep Learning for Computer Vision by NVIDIA Deep Learning Institute.</b></p>
+            </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <br>
+      <div class="row">
+        <div class="col-sm-6 text-light bg-dark">
+          <div class="thumbnail">
+            <img src="{% static '/certificates/cambridge.jpg' %}" width="600" height="600" class="d-block w-100" alt="..." />
+            <div class="caption">
+                <p><b>I am awarded as Junior Researcher by Cambridge University Press.</b></p>
+            </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-6 text-light bg-dark">
+          <div class="thumbnail">
+            <img src="{% static '/certificates/sih-2018.jpg' %}" width="600" height="600" class="d-block w-100" alt="..." />
+            <div class="caption">
+                <p><b>I had participated in Smart India Hackathon 2018.</b></p>
+            </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+      <br> 
+      <div class="row">
+        <div class="col-sm-6 text-light bg-dark">
+          <div class="thumbnail">
+            <img src="{% static '/certificates/bennett.jpg' %}" width="600" height="400" class="d-block w-100" alt="..." />
+            <div class="caption">
+                <p><b>I had done 4- weeks Summer Internship on Artificial Intelligence And Deep Learning at Bennett University, Greater Noida.</b></p>
+            </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-6 text-light bg-dark">
+          <div class="thumbnail">
+            <img src="{% static '/certificates/toastmaster-cert.jpg' %}" width="600" height="400" class="d-block w-100" alt="..." />
+            <div class="caption">
+                <p><b>I became a Charter Member with previleges and responsibilities of active membership at SRKR Toastmasters Club, Bhimavaram.</b></p>
+            </div>
+            </a>
+          </div>
+        </div>
+      </div>
+  </div> -->
+
+  <!-- adding styles to the time line-->
+  <style class="text-css">
+    .timeline {
+      list-style: none;
+      padding: 20px 0 20px;
+      position: relative;
+    }
+
+    .timeline:before {
+      top: 0;
+      bottom: 0;
+      position: absolute;
+      content: " ";
+      width: 3px;
+      background-color: #eeeeee;
+      left: 50%;
+      margin-left: -1.5px;
+    }
+
+    .timeline>li {
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .timeline>li:before,
+    .timeline>li:after {
+      content: " ";
+      display: table;
+    }
+
+    .timeline>li:after {
+      clear: both;
+    }
+
+    .timeline>li:before,
+    .timeline>li:after {
+      content: " ";
+      display: table;
+    }
+
+    .timeline>li:after {
+      clear: both;
+    }
+
+    .timeline>li>.timeline-panel {
+      width: 46%;
+      float: left;
+      border: 1px solid #d4d4d4;
+      border-radius: 2px;
+      padding: 20px;
+      position: relative;
+      -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+    }
+
+    .timeline>li>.timeline-panel:before {
+      position: absolute;
+      top: 26px;
+      right: -15px;
+      display: inline-block;
+      border-top: 15px solid transparent;
+      border-left: 15px solid #ccc;
+      border-right: 0 solid #ccc;
+      border-bottom: 15px solid transparent;
+      content: " ";
+    }
+
+    .timeline>li>.timeline-panel:after {
+      position: absolute;
+      top: 27px;
+      right: -14px;
+      display: inline-block;
+      border-top: 14px solid transparent;
+      border-left: 14px solid #fff;
+      border-right: 0 solid #fff;
+      border-bottom: 14px solid transparent;
+      content: " ";
+    }
+
+    .timeline>li>.timeline-badge {
+      color: #fff;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      font-size: 1.4em;
+      text-align: center;
+      position: absolute;
+      top: 16px;
+      left: 50%;
+      margin-left: -25px;
+      background-color: #999999;
+      z-index: 100;
+      border-top-right-radius: 50%;
+      border-top-left-radius: 50%;
+      border-bottom-right-radius: 50%;
+      border-bottom-left-radius: 50%;
+    }
+
+    .timeline>li.timeline-inverted>.timeline-panel {
+      float: right;
+    }
+
+    .timeline>li.timeline-inverted>.timeline-panel:before {
+      border-left-width: 0;
+      border-right-width: 15px;
+      left: -15px;
+      right: auto;
+    }
+
+    .timeline>li.timeline-inverted>.timeline-panel:after {
+      border-left-width: 0;
+      border-right-width: 14px;
+      left: -14px;
+      right: auto;
+    }
+
+    .timeline-badge.primary {
+      background-color: #2e6da4 !important;
+    }
+
+    .timeline-badge.success {
+      background-color: #3f903f !important;
+    }
+
+    .timeline-badge.warning {
+      background-color: #f0ad4e !important;
+    }
+
+    .timeline-badge.danger {
+      background-color: #d9534f !important;
+    }
+
+    .timeline-badge.info {
+      background-color: #5bc0de !important;
+    }
+
+    .timeline-title {
+      margin-top: 0;
+      color: inherit;
+    }
+
+    .timeline-body>p,
+    .timeline-body>ul {
+      margin-bottom: 0;
+    }
+
+    .timeline-body>p+p {
+      margin-top: 5px;
+    }
+  </style>
+
+  <!-- Time line for Certificates -->
+  <div class="container">
+    <div class="page-header">
+      <h2 id="timeline" class="text-center my-3 bg-danger" style="font-family:Brush Script MT;font-size:40px">
+        <b>Certificates</b></h2>
+    </div>
+    <ul class="timeline">
+      <li>
+        <div class="timeline-badge"><i class="glyphicon glyphicon-check"></i></div>
+        <div class="timeline-panel text-light bg-secondary">
+          <div class="timeline-heading">
+            <h4 class="timeline-title text-center">IBM Data Science Professional Certificate</h4>
+          </div>
+          <div class="thumbnail">
+            <img src="{% static '/certificates/ibm.jpg' %}" width="250" height="400" class="d-block w-100" alt="..." />
+          </div>
+          <div class="timeline-body">
+            <p><b>I had completed IBM Data Science Professional Certification from Coursera and honed hands-on skills in
+                Data Science and Machine Learning.</b></p>
+          </div>
+        </div>
+      </li>
+      <li class="timeline-inverted">
+        <div class="timeline-badge warning"><i class="glyphicon glyphicon-credit-card"></i></div>
+        <div class="timeline-panel text-light bg-warning">
+          <div class="timeline-heading">
+            <h4 class="timeline-title text-center">NVIDIA Certificate of Competency</h4>
+          </div>
+          <div class="thumbnail">
+            <img src="{% static '/certificates/nvidia.jpg' %}" width="250" height="400" class="d-block w-100"
+              alt="..." />
+          </div>
+          <div class="timeline-body">
+            <p><b>I had completed the Fundamentals of Deep Learning for Computer Vision by NVIDIA Deep Learning
+                Institute.</b></p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="timeline-badge danger"><i class="glyphicon glyphicon-credit-card"></i></div>
+        <div class="timeline-panel text-light bg-danger">
+          <div class="timeline-heading">
+            <h4 class="timeline-title text-center">Cambridge University Press</h4>
+          </div>
+          <div class="thumbnail">
+            <img src="{% static '/certificates/cambridge.jpg' %}" width="600" height="600" class="d-block w-100"
+              alt="..." />
+          </div>
+          <div class="timeline-body">
+            <p><b>I am awarded as Junior Researcher by Cambridge University Press.</b></p>
+          </div>
+        </div>
+      </li>
+      <li class="timeline-inverted">
+        <div class="timeline-badge info"><i class="glyphicon glyphicon-credit-card"></i></div>
+        <div class="timeline-panel text-light bg-info">
+          <div class="timeline-heading">
+            <h4 class="timeline-title text-center">Bennett University Summer Internship</h4>
+          </div>
+          <div class="thumbnail">
+            <img src="{% static '/certificates/bennett.jpg' %}" width="250" height="400" class="d-block w-100"
+              alt="..." />
+          </div>
+          <div class="timeline-body">
+            <p><b>I had done 4- weeks Summer Internship on Artificial Intelligence And Deep Learning at Bennett
+                University, Greater Noida.</b></p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="timeline-badge success"><i class="glyphicon glyphicon-credit-card"></i></div>
+        <div class="timeline-panel text-light bg-success">
+          <div class="timeline-heading">
+            <h4 class="timeline-title text-center">Member of Toastmasters</h4>
+          </div>
+          <div class="thumbnail">
+            <img src="{% static '/certificates/toastmaster-cert.jpg' %}" width="250" height="400" class="d-block w-100"
+              alt="..." />
+          </div>
+          <div class="timeline-body">
+            <p><b>I became a Charter Member with previleges and responsibilities of active membership at SRKR
+                Toastmasters Club, Bhimavaram</b>></p>
+          </div>
+        </div>
+      </li>
+      <li class="timeline-inverted">
+        <div class="timeline-badge dark"><i class="glyphicon glyphicon-credit-card"></i></div>
+        <div class="timeline-panel text-light bg-dark">
+          <div class="timeline-heading">
+            <h4 class="timeline-title text-center">Participated in SIH-2018</h4>
+          </div>
+          <div class="thumbnail">
+            <img src="{% static '/certificates/sih-2018.jpg' %}" width="250" height="400" class="d-block w-100"
+              alt="..." />
+          </div>
+          <div class="timeline-body">
+            <p><b>I had participated in Smart India Hackathon 2018</b>></p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+{% endblock body %}

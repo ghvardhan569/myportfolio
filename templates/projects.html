@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block nav_item_projects %}active{% endblock nav_item_projects %}
+{% block title %}Projects{% endblock title %}
+
+{% block body %}
+  <!-- Bootstrap Cards Implementation -->
+  <div class="container my-3">
+    <h2 class="text-center my-3 py-0 tect-light bg-success" style="font-family:Brush Script MT;font-size:40px">
+      <b>Projects</b></h2>
+    <div class="row">
+      <div class="col d-flex justify-content-center">
+        <div class="card" style="width: 18rem;">
+          <img src="{% static '/projects/nplate.jpg' %}" width="300" height="200" class="d-block w-100" alt="..." />
+          <!-- Image Source:- Innominds
+                Image Link:- https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.innominds.com%2Fhs-fs%2Fhubfs%2FInnominds-201612%2Fimg%2FIM%2520Inner%2520Pages%2FANPR%2Fwhat-is-anpr.png%3Fwidth%3D462%26name%3Dwhat-is-anpr.png&imgrefurl=https%3A%2F%2Fwww.innominds.com%2Fconnected-devices-and-iot%2Fnumix-video-analytics-solutions%2Fanpr&tbnid=-Tlq6zacuKoc5M&vet=12ahUKEwjT9LD4uJHwAhW9lUsFHc5CAV4QMygCegUIARC5AQ..i&docid=cw19s5zE19NEqM&w=462&h=252&q=number%20plate%20detection%20best%20pics&ved=2ahUKEwjT9LD4uJHwAhW9lUsFHc5CAV4QMygCegUIARC5AQ -->
+          <div class="card-body">
+            <h5 class="card-title">Car Number Plate Detection</h5>
+            <p class="card-text">Developed a website that detects and stores the Number plates of cars captured from a
+              CCTV using Opencv and Optical Character Recognition (OCR).
+              It is build using some python Libraries, we had used SMTP protocol for transferring
+              of messages about the car details to the users, who have registered in our website. This developed model
+              acts a real-world prototype and can be implemented at Traffic-signals,
+              Apartments, Multiplexes, Malls and so...on. </p>
+            <a href="https://github.com/ghvardhan569/number-plate-detection" class="btn btn-primary">Click me</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col d-flex justify-content-center">
+        <div class="card" style="width: 18rem;">
+          <img src="{% static '/projects/3dpoint.jpg' %}" width="300" height="200" class="d-block w-100" alt="..." />
+          <!-- Image Source:- Medium 
+                Image Link:- https://www.google.com/imgres?imgurl=https%3A%2F%2Fmiro.medium.com%2Fmax%2F696%2F1*KQCJdtMpCAzjR00olCJc8Q.jpeg&imgrefurl=https%3A%2F%2Fmedium.com%2Fdeep-learning-reviews%2Fpoint-transformer-paper-review-caa081cb691&tbnid=kcvqlSjYXgAMhM&vet=10CMQBEDMowQFqFwoTCLCo76y5kfACFQAAAAAdAAAAABAC..i&docid=ja-PjRTepgex-M&w=696&h=460&q=3d%20point%20cloud%20classification&ved=0CMQBEDMowQFqFwoTCLCo76y5kfACFQAAAAAdAAAAABAC -->
+          <div class="card-body">
+            <h5 class="card-title">3D Point Cloud Classification</h5>
+            <p class="card-text">We worked on 3D point cloud classification using the dataset ModelNet40. This
+              represents the objects in 3D – space.
+              In future, this application is used in robotics, AR (Augmented Reality), and Urban Planning.
+              we have implemented the PointNet architecture model, to solve this problem. The images are taken form
+              satellite and are present in 3d-space.
+              It is hard to configure the dataset and preprocessing it, but is very challenging during model
+              development.</p>
+            <a href="https://github.com/ghvardhan569/3D-Point-Cloud-Classification" class="btn btn-primary">Click me</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col d-flex justify-content-center">
+        <div class="card" style="width: 18rem;">
+          <img src="{% static '/projects/face.jpg' %}" width="300" height="200" class="d-block w-100" alt="..." />
+          <!-- Image Source:- towardsdatascience
+                Image Link:- https://www.google.com/imgres?imgurl=https%3A%2F%2Fmiro.medium.com%2Fmax%2F660%2F1*enzZrRQ_EwtfJJKOffrcFg.png&imgrefurl=https%3A%2F%2Ftowardsdatascience.com%2Fhow-to-build-a-face-detection-and-recognition-system-f5c2cdfbeb8c&tbnid=jh6VrpUtIUGu3M&vet=12ahUKEwiWpaOMupHwAhVCSisKHan6DyQQMygAegUIARDTAQ..i&docid=SxTQGIH1vTumwM&w=660&h=370&q=face%20detection&ved=2ahUKEwiWpaOMupHwAhVCSisKHan6DyQQMygAegUIARDTAQ -->
+          <div class="card-body">
+            <h5 class="card-title">Detection & Drawings of Face using Opencv and OCR</h5>
+            <p class="card-text">I have developed a webpage and placed some buttons on the webpage, each button
+              possesses different functionality. One button is used to capture face and identify face, eyes, mouth in
+              the captured picture. Next one is to sketch the captured face using Opencv. Next button is to draw out the
+              borders of the given picture, captured in the camera. Next button is to count the number of persons
+              present infront of the camera.</p>
+            <a href="https://github.com/ghvardhan569/flask" class="btn btn-primary">Click me</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap video embed implementation -->
+  <div class="container">
+    <br>
+    <h2 class="text-center my-3 text-light bg-danger" style="font-family:Brush Script MT;font-size:40px;"><b>My Project
+        Videos</b></h2>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="embed-container">
+          <iframe src="https://www.youtube.com/embed/6MGtQe-pXYg?rel=0" width="625px"
+          height="400px"></iframe>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="embed-container">
+          <iframe src="https://www.youtube.com/embed/NbA1y5t96Ds?rel=0" width="625px"
+          height="400px"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+{% endblock body %}

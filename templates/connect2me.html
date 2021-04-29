@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+
+{% block nav_item_connect2me %}active{% endblock nav_item_connect2me %}
+{% block title %}Connect2me{% endblock title %}
+
+{% block body %}
+  <!-- Add icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Forms in Bootstrap -->
+  <div class="container my-3">
+    <h2 class="text-center my-3 bg-info" style="font-family:Brush Script MT;font-size:40px"><b>Connect 2 Me</b></h2>
+    <form action='/connect2me' method="POST">
+      {% csrf_token %}
+      <div class="form-group row">
+        <label for="name" class="col-sm-2 col-form-label"><b>Name</b></label>
+        <div class="col-sm-10">
+          <input type="name" class="form-control" id="name" name="name" placeholder="Full Name">
+        </div>
+      </div>
+      <br>
+
+      <div class="form-group row">
+        <label for="email" class="col-sm-2 col-form-label"><b>Email</b></label>
+        <div class="col-sm-10">
+          <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+        </div>
+      </div>
+      <br>
+
+      <div class="form-group row">
+        <label for="phone" class="col-sm-2 col-form-label"><b>Phone</b></label>
+        <div class="col-sm-10">
+          <input type="phone" class="form-control" id="phone" name="phone" placeholder="phone number">
+        </div>
+      </div>
+      <br>
+
+      <div class="form-group row">
+        <label for="exampleFormControlTextarea1" class="col-sm-2 col-form-label"><b>Suggestion/Queries</b></label>
+        <div class="col-sm-10">
+          <textarea class="form-control" id="desc" name="desc" rows="3"
+            placeholder="Enter some text"></textarea>
+        </div>
+      </div>
+      <br>
+
+      <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+  </div>
+
+  <!-- Styling for Social Media Links -->
+  <style>
+    .fa {
+      padding: 15px;
+      font-size: 12px;
+      width: 40px;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 100%;
+    }
+
+    .fa-google {
+      background: #dd4b39;
+      color: white;
+    }
+
+    .fa-linkedin {
+      background: #007bb5;
+      color: white;
+    }
+
+    .fa-github {
+      background: #333333;
+      color: white;
+    }
+
+    .fa-facebook {
+      background: #3B5998;
+      color: white;
+    }
+
+    .fa-youtube {
+      background: #bb0000;
+      color: white;
+    }
+
+    .fa-instagram {
+      background: #125688;
+      color: white;
+    }
+
+    .fa-twitter {
+      background: #55ACEE;
+      color: white;
+    }
+  </style>
+
+  <br>
+  <br>
+  <!-- Inserting Social Media Links -->
+  <div class="container">
+    <h2 class="text-center my-3" style="font-family:Brush Script MT;font-size:28px"><b>Social Media Links -- </b>
+      <a href="mailto:ghvardhan123@gmail.com" class="fa fa-google" style=" margin-right: 10px;"></a>
+      <a href="https://www.linkedin.com/in/ghvardhan569/" class="fa fa-linkedin" style="margin-right: 10px;"></a>
+      <a href="https://github.com/ghvardhan569" class="fa fa-github" style="margin-right: 10px;"></a>
+      <a href="https://www.youtube.com/channel/UCOVDpjeOqTNkz5ykv9NSMzA" class="fa fa-youtube"
+        style=" margin-right: 10px;"></a>
+    </h2>
+  </div>
+  <br>
+{% endblock body %}

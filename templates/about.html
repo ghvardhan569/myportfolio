@@ -1,0 +1,176 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block nav_item_about %}active{% endblock nav_item_about %} 
+{% block title %}About{% endblock title %}
+
+{% block body %}
+  <!-- Images and Grid system in Bootstrap-->
+  <div class="container my-3">
+    <h2 class="text-center my-3 py-0 bg-info" style="font-family:Brush Script MT;font-size:40px;"><b>Self
+        Introduction</b></h2>
+    <div class="row">
+      <div class="col-sm-3">
+        <img src="{% static '/harsha.jpg' %}" width="275" height="350" class="rounded-circle" alt="..." />
+      </div>
+      <div class="col-12 col-md-8">
+        <br>
+        <div class="row row-cols-1">
+          <div class="col">
+            <h3><b>Harsha Vardhan Garlapati</b></h3>
+          </div>
+          <div class="col"><b>ML Engineer Enthusiast</b></div>
+        </div>
+        <br>
+
+        I'm a self-paced learner with a passion and determination to try out something new with the my skills. I love
+        exploring myself a lot
+        to bring my potential and strength to do and develop new things. I believe in me and in the things i do. I like
+        travelling to strange places,
+        building my network with different people, loves listening to Music, and always love to put myself in
+        developement of new things.
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        I am a Developer, Toastmaster, Organizer and so...on. I mould myself according to the situations, try to adjust
+        to them and acts according to it.
+        I would like be One and only choice for anyone, but not One of the choice to any person. I spend most of the
+        time in brain storming of the problems
+        that i encounter and always wanted to find smart solutions to those. I am person who prefers to be a Smart
+        Worker, and always wanted to be unique
+        among others in all aspects.
+      </div>
+    </div>
+  </div>
+
+  <!--- bootstrap cards implementation-->
+  <div class="container my-3">
+    <br>
+    <h2 class="text-center my-3 py-0 bg-danger" style="font-family:Brush Script MT;font-size:40px">
+      <b>About Me</b>
+    </h2>
+    <div class="row">
+      <div class="col d-flex justify-content-center">
+        <div class="card" style="width: 18rem;">
+          <img src="{% static '/developer.jpg' %}" width="300" height="200" class="d-block w-100" alt="..." />
+          <!-- Image Source: Dice Insights
+              Image Link:- https://www.google.com/url?sa=i&url=https%3A%2F%2Finsights.dice.com%2F2018%2F09%2F11%2Fmanagement-knows-developers-worth%2F&psig=AOvVaw3ipzSauT6owzkjcPT9tyHt&ust=1619072355150000&source=images&cd=vfe&ved=0CAoQjRxqFwoTCPDt2bPZjvACFQAAAAAdAAAAABAD -->
+          <div class="card-body">
+            <h5 class="card-title">Developer</h5>
+            <p class="card-text">I love trying out new projects, exploring & gaining insights form new technologies,
+              problem solving.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col d-flex justify-content-center">
+        <div class="card" style="width: 18rem;">
+          <img src="{% static '/toastmaster.jpg' %}" width="300" height="200" class="d-block w-100" alt="..." />
+          <!-- Image Source:- Medium
+              Image Link:- https://www.google.com/imgres?imgurl=https%3A%2F%2Fmiro.medium.com%2Fmax%2F681%2F1*cw1nLvkC3X0oc60Tl_M2pA.jpeg&imgrefurl=https%3A%2F%2Fmedium.com%2F%40al.pittampalli%2Ftoastmasters-ae9ec0a21c5a&tbnid=MN21Asyx6E2gIM&vet=12ahUKEwjJjN6X247wAhVBXCsKHZH6BNkQMygFegUIARDcAQ..i&docid=OipgN2jbAvwxOM&w=681&h=369&q=toastmaster&ved=2ahUKEwjJjN6X247wAhVBXCsKHZH6BNkQMygFegUIARDcAQ -->
+          <div class="card-body">
+            <h5 class="card-title">Toastmaster</h5>
+            <p class="card-text">I'm a Toastmaster at S.R.K.R Toastmaster's club Bhimavaram from March 2019 - June 2020.
+            </p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col d-flex justify-content-center">
+        <div class="card" style="width: 18rem;">
+          <img src="{% static '/organizer.jpg' %}" width="300" height="200" class="d-block w-100" alt="..." />
+          <!-- Image Source:- Medium 
+              Image Link:- https://www.google.com/imgres?imgurl=https%3A%2F%2Fmiro.medium.com%2Fmax%2F2048%2F1*VcCBSbXt4BvthjMBDENhIg.jpeg&imgrefurl=https%3A%2F%2Fmedium.com%2F%40eventryseo%2Fglancing-at-the-business-benefits-of-event-management-apps-acaf0652d984&tbnid=kTA6wShjtQE3kM&vet=12ahUKEwjis-qf3I7wAhX-kUsFHWxwAqoQMygHegUIARDdAQ..i&docid=5SqI5Wo8eRN_4M&w=1024&h=682&q=event%20organizer&ved=2ahUKEwjis-qf3I7wAhX-kUsFHWxwAqoQMygHegUIARDdAQ -->
+          <div class="card-body">
+            <h5 class="card-title">Organizer</h5>
+            <p class="card-text">I do organize various types of events in my college like Workshops, Meetings, Games,
+              etc.,</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Images certificates and Grid system in Bootstrap -->
+  <div class="container my-3">
+    <br>
+    <h2 class="text-center my-3 py-0 bg-success" style="font-family:Brush Script MT;font-size:40px">
+      <b>Internship Experience</b>
+    </h2>
+    <div class="row">
+      <div class="col-md-2 mx-5">
+        <img src="{% static '/intern/buniv.png' %}" width="200" height="50" class="img-thumbnail" alt="..." />
+        <!-- Image Source: Facebook
+            Image Link:- https://www.google.com/imgres?imgurl=https%3A%2F%2Flookaside.fbsbx.com%2Flookaside%2Fcrawler%2Fmedia%2F%3Fmedia_id%3D877775162235596&imgrefurl=https%3A%2F%2Fwww.facebook.com%2Fbennettuniversity%2F&tbnid=MCH3CyFfpspBvM&vet=12ahUKEwiFxezZyJPwAhUNJbcAHbxWCjAQMygjegUIARCRAg..i&docid=8nPy8-ZXuxFcxM&w=1080&h=1080&q=bennett%20university&ved=2ahUKEwiFxezZyJPwAhUNJbcAHbxWCjAQMygjegUIARCRAg -->
+      </div>
+      <div class="col-12 col-md-9">
+        I had done 4-week Internship on <b>Artificial Intelligence and Deep learning</b> at Bennett University,
+        Greater Noida (U.P), India. I had an exposure to various Machine Learning and Deep Learning algorithms,
+        their applications, writing sample codes on each algorithm and so..on. I had partcipated in Hackathon at
+        weekends during the Internship. I am beginner to those technologies at that time, but I could learn to a
+        little extent and was able to do my best during the Internship period with the help of my mentor <b>Dr. Suneet
+          Gupta</b>, from 27th May 2019 to 19th June 2019.
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I along with my team
+          worked on a project named
+          <b>3D Point Cloud Classification</b> with dataset <b>ModelNet40</b>
+          and My contribution was Getting the dataset and Preprocessing it. I had worked with <b>Super
+            Computer</b> for
+          better computation of the dataset and building and further running our model.
+        </p>
+      </div>
+    </div>
+
+    <br>
+    <div class="row">
+      <div class="col-md-2 mx-5">
+        <br>
+        <br>
+        <img src="{% static '/intern/mconsul.png' %}" width="200" height="50" class="img-thumbnail" alt="..." />
+        <!-- Image Source: Sri Maharshi Consultancy
+            Image Link:- data:image/png;base64,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 -->
+      </div>
+      <div class="col-12 col-md-9">
+        I had worked as a intern from 22nd July 2019 to 15th Feb 2020 at <b>Sri Maharshi Consultancy Pvt Ltd</b>, which
+        is a Product Organization offering
+        products and services to National & International Customers with rimary Focus on Banking. We have a good mentors
+        <b>Srinivasa Varma</b> sir & <b>PRSSV Raghu</b> sir, who
+        helped us all the way in learning new things and in development design of the project.
+        I along with my team worked on a product named <b>Lending Master</b>,
+        designed to track loans issued for Micro Finance Organizations with Live Implementation.
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; As a intern, I worked in
+          Screen Configurations, Development of Transfer bjects,
+          Data Access Objects, Deployment of war file to AWS EC2 instances and Testing. Functional areas of
+          Contribution: Customer Registration, Loan Application, Loan Grant,
+          Loan Disbursement, Loan Closure, Transaction Listing as per Product Framework.
+        </p>
+      </div>
+    </div>
+
+    <br>
+    <div class="row">
+      <div class="col-md-2 mx-5">
+        <br>
+        <img src="{% static '/intern/knowledgehut.png' %}" width="200" height="50" class="img-thumbnail" alt="..." />
+        <!-- Image Source: Scrum.org
+            Image Link:- https://www.google.com/imgres?imgurl=https%3A%2F%2Fscrumorg-website-prod.s3.amazonaws.com%2Fdrupal%2F2020-03%2Fknowledgehut.jpg&imgrefurl=https%3A%2F%2Fwww.scrum.org%2Fknowledgehut&tbnid=tu9AnXYdvxI-fM&vet=12ahUKEwiGl8nG2JPwAhVm5HMBHWvfBF0QMygAegUIARCjAQ..i&docid=dTNOYzlxp_yk3M&w=250&h=250&q=knowledgehut&ved=2ahUKEwiGl8nG2JPwAhVm5HMBHWvfBF0QMygAegUIARCjAQ -->
+      </div>
+      <div class="col-12 col-md-9">
+        I have been working as a Blog Writer at <b>KnowledgeHut Company</b> in the field of <b>Machine Learning & Data
+          Science</b>
+        for 7 months. This area is quite challenging and interesting to me, as we develop new content which is readable
+        and understandable
+        by the users. In order to have a grip on the new technologies like Machine Learning, Data Science, Artificial
+        Intelligence etc.,
+        we should be good at both the theory as well as the application part.
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; As a intern, I had
+          written some blogs like
+          Mathematics for Machine Learning, most commonly used Machine Learning Algorithms, How to get Datasets for
+          machine Learning,
+          Model Evaluation in Machine Learning etc.,
+        </p>
+      </div>
+    </div>
+  </div>
+{% endblock body %}
